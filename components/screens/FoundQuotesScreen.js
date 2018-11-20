@@ -1,72 +1,45 @@
 import React, {Component} from 'react'
 import {View, Text, FlatList, StyleSheet} from 'react-native'
-
-export const QuoteCell = (props) => {
-    const defStyles = StyleSheet.create({
-        cellContainer: {
-            padding: 10,
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            height: 80
-        },
-        roundImage: {
-            height: 70,
-            aspectRatio: 1,
-            backgroundColor: '#86592d',
-            borderRadius: 35,
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: 10
-        },
-        label: {
-            color: 'white',
-            fontSize: 40
-        }
-    })
-
-    const quoteObj = props.quoteObj
-    console.log(quoteObj)
-    return (
-        <View style={defStyles.cellContainer}>
-            <View style={defStyles.roundImage}>
-                <Text style={defStyles.label}>{quoteObj.id}</Text>
-            </View>
-            <Text>{quoteObj.quote.value}</Text>
-        </View>
-    )
-};
-
+import {QuoteCell} from "../views/QuoteCell";
 
 export default class FoundQuotesScreen extends Component {
 
     constructor(props) {
         super(props);
+        const quotes = this.props.navigation.getParam('quotes');
         this.state = {
-            quotes: this.props.navigation.getParam('quotes', [])
+            quotes: quotes !== undefined ? quotes : []
         }
-
     }
 
     renderCell(quoteObj) {
-        console.log(quoteObj)
         return (
-            <QuoteCell quoteObj={quoteObj}/>
+            <QuoteCell quoteObj={quoteObj} onPress={() => this.goToDetail(quoteObj)}/>
         )
+    }
+
+    goToDetail(quoteObj) {
+        this.props.navigation.navigate('QuoteDetailScreen', {quoteObj: quoteObj})
     }
 
     render() {
         const data = this.state.quotes.map((quote, index) => ({id: index, quote: quote}));
+        const headerText = data.length > 0 ? 'Found some stupid quotes for you!' : 'Could not find any stupid quotes'
         return (
             <View style={styles.container}>
-                <Text style={styles.header}>Here are some stupid quotes for you!</Text>
-                <FlatList renderItem={({item}) => this.renderCell(item)}
+                <View style={styles.header}>
+                    <Text style={styles.headerText}>{headerText}</Text>
+                </View>
+                <FlatList style={styles.list}
+                          renderItem={({item}) => this.renderCell(item)}
                           data={data}
-                          keyExtractor={(item, index) => `${item.id}`}/>
+                          keyExtractor={(item, index) => `${item.id}`}
+                />
+                <View style={styles.footer}/>
             </View>
         )
     }
+
 
 }
 
@@ -78,9 +51,23 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     header: {
-        fontSize: 20,
-        color: '#000066'
+        backgroundColor: '#000066',
+        height: '10%',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    cellContainer: {}
+    headerText: {
+        fontSize: 20,
+        color: 'white'
+    },
+    list: {
+        width: '100%',
+    },
+    footer: {
+        height: '8%',
+        backgroundColor: 'red'
+
+    }
 
 })

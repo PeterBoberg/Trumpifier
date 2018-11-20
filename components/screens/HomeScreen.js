@@ -40,7 +40,6 @@ export default class HomeScreen extends Component<Props> {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 30,
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
