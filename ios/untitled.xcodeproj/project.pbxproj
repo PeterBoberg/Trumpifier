@@ -1518,7 +1518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = se.peter.Trumpifier;
 				PRODUCT_NAME = untitled;
-				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier Distr";
+				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier-Ad-Hoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1548,7 +1548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = se.peter.Trumpifier;
 				PRODUCT_NAME = untitled;
-				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier Distr";
+				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier-Ad-Hoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
