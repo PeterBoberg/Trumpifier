@@ -831,7 +831,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = MC4SKP6TFN;
+						DevelopmentTeam = C3MT9L3V3G;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1497,11 +1497,11 @@
 			baseConfigurationReference = 9157203547B2F691A1DF369D /* Pods-untitled.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: IT-Huset i Norden AB";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Peter Boberg (C3MT9L3V3G)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = MC4SKP6TFN;
+				DEVELOPMENT_TEAM = C3MT9L3V3G;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
@@ -1516,9 +1516,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ith.enterprise.Trumpifier;
+				PRODUCT_BUNDLE_IDENTIFIER = se.peter.Trumpifier;
 				PRODUCT_NAME = untitled;
-				PROVISIONING_PROFILE_SPECIFIER = "ITH Enterprise Generic";
+				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier Distr";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1528,10 +1528,10 @@
 			baseConfigurationReference = 6F9E77EFE571A6F915BFCEA8 /* Pods-untitled.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: IT-Huset i Norden AB";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Peter Boberg (C3MT9L3V3G)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MC4SKP6TFN;
+				DEVELOPMENT_TEAM = C3MT9L3V3G;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
@@ -1546,9 +1546,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ith.enterprise.Trumpifier;
+				PRODUCT_BUNDLE_IDENTIFIER = se.peter.Trumpifier;
 				PRODUCT_NAME = untitled;
-				PROVISIONING_PROFILE_SPECIFIER = "ITH Enterprise Generic";
+				PROVISIONING_PROFILE_SPECIFIER = "Trumpifier Distr";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
