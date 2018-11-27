@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
     bgImage: {
         width: '100%',
-        height: '50%',
+        height: '45%',
         marginBottom: 10
     },
 });
